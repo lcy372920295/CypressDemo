@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open --env host=https://www.google.com/",
+    "app:lint": "eslint src/",
+    "cy:lint": "eslint cypress/",
+    "lint": "npm run app:lint && npm run cy:lint"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +16,14 @@
     "-": "0.0.1",
     "D": "^1.0.0",
     "cypress": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "prettier": "^2.0.5"
   }
 }
